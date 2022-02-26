@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: skyblue;
+    transition: all 2s ease-in-out;
+}
+
+.container {
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: wheat;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
+}
+.container-img {
+    width: 50%;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    position: relative;
+}
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.box-btn{
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 10px;
+    height: 50px;
+    width: 344px;
+    position: relative;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.container-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 40%;
+    width: 40%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.container-btn span {
+    --parameters: -3px;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    position: absolute;
+    width: calc(50% - var(--parameters));
+    height: calc(100% - var(--parameters));
+    background-color: #fff;
+    border-radius: 5px;
+    border: 3px solid black;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all .5s ease-in-out;
+
+}
+
+.container-btn button {
+    color: #fff;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 50%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.btn-on{
+    background-color: green;
+}
+
+.btn-off {
+    background-color: red;
+}
+
+/* reponsive */
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 80%;
+        height: 50%;
+    }
+    .container-img {
+        width: 78%;
+    }
+
+    .box-btn {
+        height: 100%;
+        width: 84%;
+    }
+
+    .container-btn {
+        height: 60%;
+        width: 73%;
+    }
+
+    .container-btn button{
+        font-size: 20px;
+    }
+}
+
